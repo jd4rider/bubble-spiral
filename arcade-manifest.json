@@ -5,7 +5,7 @@
   "description": "A marble-chain arcade puzzle: a spiral of coloured marbles crawls toward a hole, and every shot you fire joins the chain. Connect three or more of a colour to pop them, and watch the gap snap shut — a closing seam can trigger a second match before the chain reaches the hole. One hundred seeded Journey boards across eight chapters, plus Classic, Endless, Zen and a shared daily spiral.",
   "categories": ["Arcade", "Puzzle", "Casual"],
   "runtime": "Phaser 4",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "updated": "2026-11-02",
   "status": "live",
   "featured": false,
