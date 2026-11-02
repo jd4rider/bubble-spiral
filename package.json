@@ -1,0 +1,87 @@
+{
+  "name": "bubble-spiral",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Bubble Spiral — a marble-chain arcade puzzle for Little Joy Arcade.",
+  "author": "jd4rider",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "test": "node --test src/chain.test.js",
+    "preview": "vite preview",
+    "start": "npm run build && electron .",
+    "dist:mac": "vite build && electron-builder --mac",
+    "dist:win": "vite build && electron-builder --win nsis --x64",
+    "dist:linux": "vite build && electron-builder --linux AppImage"
+  },
+  "dependencies": {
+    "phaser": "^4.2.1"
+  },
+  "devDependencies": {
+    "electron": "^41.7.1",
+    "electron-builder": "^26.18.0",
+    "oxlint": "^1.89.0",
+    "vite": "^8.3.5"
+  },
+  "build": {
+    "appId": "com.jd4rider.bubblespiral",
+    "productName": "Bubble Spiral",
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    },
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.puzzle-games",
+      "icon": "build/icon.icns",
+      "artifactName": "Bubble-Spiral-mac-${arch}.${ext}",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "title": "Bubble Spiral ${version}"
+    },
+    "win": {
+      "icon": "build/icon-1024.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "Bubble-Spiral-win-setup.${ext}"
+    },
+    "linux": {
+      "category": "Game",
+      "icon": "build/icon-1024.png",
+      "artifactName": "Bubble-Spiral-linux-${arch}.${ext}",
+      "target": [
+        "AppImage"
+      ]
+    }
+  }
+}
