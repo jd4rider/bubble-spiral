@@ -3,7 +3,11 @@
   "name": "Bubble Spiral",
   "tagline": "Aim, fire, pop the chain.",
   "description": "A marble-chain arcade puzzle: a spiral of coloured marbles crawls toward a hole, and every shot you fire joins the chain. Connect three or more of a colour to pop them, and watch the gap snap shut — a closing seam can trigger a second match before the chain reaches the hole. One hundred seeded Journey boards across eight chapters, plus Classic, Endless, Zen and a shared daily spiral.",
-  "categories": ["Arcade", "Puzzle", "Casual"],
+  "categories": [
+    "Arcade",
+    "Puzzle",
+    "Casual"
+  ],
   "runtime": "Phaser 4",
   "version": "0.1.1",
   "updated": "2026-11-02",
@@ -14,8 +18,33 @@
   "siteUrl": "https://jd4rider.github.io/bubble-spiral/",
   "repoUrl": "https://github.com/jd4rider/bubble-spiral",
   "releasesUrl": "https://github.com/jd4rider/bubble-spiral/releases",
-  "downloads": [],
-  "cover": { "from": "#f472b6", "to": "#4338ca", "emoji": "🌀" },
+  "downloads": [
+    {
+      "label": "macOS (Apple Silicon)",
+      "platform": "macOS",
+      "url": "https://github.com/jd4rider/bubble-spiral/releases/download/v0.1.1/Bubble-Spiral-mac-arm64.dmg"
+    },
+    {
+      "label": "macOS (Intel)",
+      "platform": "macOS",
+      "url": "https://github.com/jd4rider/bubble-spiral/releases/download/v0.1.1/Bubble-Spiral-mac-x64.dmg"
+    },
+    {
+      "label": "Windows installer",
+      "platform": "Windows",
+      "url": "https://github.com/jd4rider/bubble-spiral/releases/download/v0.1.1/Bubble-Spiral-win-setup.exe"
+    },
+    {
+      "label": "Linux AppImage",
+      "platform": "Linux",
+      "url": "https://github.com/jd4rider/bubble-spiral/releases/download/v0.1.1/Bubble-Spiral-linux-x86_64.AppImage"
+    }
+  ],
+  "cover": {
+    "from": "#f472b6",
+    "to": "#4338ca",
+    "emoji": "🌀"
+  },
   "highlights": [
     "100 seeded Journey spirals across eight chapters, each checked against a shot-budget fairness rule",
     "Rainbow, bomb and frozen marbles, plus Slow, Reverse and Rainbow power-ups",
