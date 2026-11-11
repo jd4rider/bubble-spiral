@@ -1,4 +1,5 @@
 import Phaser from 'phaser'
+import { openTipJar } from './support.js'
 import {
   W,
   H,
@@ -615,6 +616,17 @@ export default class GameScene extends Phaser.Scene {
         theme,
       }),
     )
+    // Quiet support link: results panel only, under the actions inside the card.
+    layer.add(
+      button(this, W / 2, 690, '☕ Buy me a coffee', () => openTipJar(), {
+        width: 300,
+        height: 30,
+        size: 13,
+        fill: theme.dark ? 0x312e81 : 0xffffff,
+        textColor: theme.dark ? '#e0e7ff' : theme.text,
+        theme,
+      }),
+    )
   }
 
   showLose() {
@@ -637,6 +649,17 @@ export default class GameScene extends Phaser.Scene {
         width: 360,
         height: 50,
         size: 17,
+        fill: theme.dark ? 0x312e81 : 0xffffff,
+        textColor: theme.dark ? '#e0e7ff' : theme.text,
+        theme,
+      }),
+    )
+    // Quiet support link: results panel only, under the actions inside the card.
+    layer.add(
+      button(this, W / 2, 626, '☕ Buy me a coffee', () => openTipJar(), {
+        width: 300,
+        height: 26,
+        size: 12,
         fill: theme.dark ? 0x312e81 : 0xffffff,
         textColor: theme.dark ? '#e0e7ff' : theme.text,
         theme,
